@@ -1,8 +1,6 @@
 //import Sort from "./Sort";
 let algorithm,
   clock,
-  /*  steps = 0,
-  width, */
   height = 500,
   stg = new Object(),
   arr = new Array();
@@ -12,13 +10,8 @@ const ctx = canvas.getContext("2d");
 ctx.fillStyle = "#e6951c";
 ctx.lineWidth = 2;
 ctx.strokeStyle = "black";
-/* const barWidth = canvas.width / arr.length;
-const barHeightScale = canvas.height / Math.max(...arr);
-const randomArr = Array(100)
-  .fill(0)
-  .map(Math.random);
-const userArray = document.getElementById("input").value; */
 
+// fill Array with random values
 arr.fillRandomly = function(length) {
   let a = new Array();
   for (let i = 0; i < length; i++) {
@@ -68,7 +61,6 @@ let insertionSort = {
       arr.swap(stg.j, stg.j - 1);
       stg.j--;
     }
-    //steps++;
   },
 };
 
@@ -76,7 +68,6 @@ document.getElementById("slider").addEventListener("input", slide, false);
 
 export function start() {
   arr.fillRandomly(75);
-  //width = arr.length * 10;
   algorithm = insertionSort;
   slide();
   algorithm.setup();
@@ -104,27 +95,3 @@ function slide() {
   label.innerHTML = Math.round(fps * 10) / 10 + "fps";
   clock = setInterval(main, time);
 }
-
-/* export function drawGraphFromArray(array) {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  const barWidth = canvas.width / array.length;
-  const barHeightScale = canvas.height / Math.max(...array);
-  ctx.lineWidth = 2;
-  ctx.strokeStyle = "black";
-
-  array.forEach((value, i) =>
-    ctx.fillRect(i * barWidth, 0, barWidth, barHeightScale * value)
-  );
-}
-
-export function renderLoop() {
-  const yieldedArray = sortGenerator.next();
-  let fps = 20;
-
-  drawGraphFromArray(yieldedArray);
-
-  function animate(arr) {
-    setTimeout(requestAnimationFrame(renderLoop), 1000 / fps);
-  }
-  animate(yieldedArray);
-} */

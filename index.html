@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="eng-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Algorithm Visualization</title>
-  </head>
 
-  <body>
-    <header id="header">
-      <div class="content">
-        <h2 id="title">Algorithm Visualization</h2>
-        <p>
-          This page visualizes the execution of an insertion sorting algorithm.
-          Simply submit a comma separated sequence of numbers. <br />
-          <br />
-          Use the start button to initialize the visualization.
-        </p>
-      </div>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algorithm Visualization</title>
+</head>
 
-    <form>
-      <label for="input" id="name">Array to sort</label>
-      <input type="text" id="input" placeholder="Insert sequence of numbers" />
-      <input type="submit" id="submit" />
-      <label for="name" id="output">Sorted Array</label>
-      <button class="btn-start" id="btn-start">Start</button>
-    </form>
+<body>
+  <header id="header">
+    <div class="content">
+      <h2 id="title">Algorithm Visualization</h2>
+      <p>
+        This page visualizes the execution of an insertion sorting algorithm.
+        Simply submit a comma separated sequence of numbers. <strong>(Currently set to use a random array of 75
+          numbers)</strong> <br />
+        <br />
+        Use the start button to initialize the visualization.
+      </p>
+    </div>
+  </header>
 
-    <div id="array-container"></div>
-    <section id="visual" class="input-visualization">
-      <canvas id="graph" width="750" height="500"> </canvas>
-      <input id="slider" type="range" min="0" max="100" value="0" />
-      <label align="center" for="slider" id="sliderLabel">1fps</label>
-      <label id="lblPass">0 </label><label> Passes </label><label> | </label
-      ><label id="lblDisplay">0 </label><label> Swaps</label>
-    </section>
-    <script type="text/javascript" src="public/bundle.js"></script>
-  </body>
+  <form>
+    <label for="input" id="name">Array to sort</label>
+    <input type="text" id="input" placeholder="Insert sequence of numbers" />
+    <input type="submit" id="submit" />
+    <label for="name" id="output">Sorted Array</label>
+    <button class="btn-start" id="btn-start">Start</button>
+  </form>
+
+  <div id="array-container"></div>
+  <section id="visual" class="input-visualization">
+    <canvas id="graph" width="750" height="500"> </canvas>
+    <input id="slider" type="range" min="0" max="100" value="0" />
+    <label align="center" for="slider" id="sliderLabel">1fps</label>
+    <label id="lblPass">0 </label><label> Passes </label><label> | </label><label id="lblDisplay">0 </label><label>
+      Swaps</label>
+  </section>
+  <script type="text/javascript" src="public/bundle.js"></script>
+</body>
+
 </html>

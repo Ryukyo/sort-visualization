@@ -2,9 +2,6 @@
 const canvas = require("./canvas");
 require("./index.css");
 
-//const sort = new Sort();
-//sort.sort();
-
 function createCheesyTitle(slogan) {
   const container = document.createElement("h1");
   const textNode = document.createTextNode(slogan);
