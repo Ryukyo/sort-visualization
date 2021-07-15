@@ -2,7 +2,7 @@
 
 Goal: Implementing a sorting algorithm and creating a front-end visualization of it.
 
-![Sample output](https://github.com/[Ryukyo]/[sort-visualization]/blob/[main]/insertion_sample.png?raw=true)
+![Sample output](insertion_sample.png)
 
 ## Environment
 
